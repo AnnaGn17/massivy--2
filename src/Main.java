@@ -1,13 +1,21 @@
 public class Main {
     public static void main(String[] args) {
-        // 1
+
+//2
 
         int[] arr = generateRandomArray();
-        int sum = 0;
-        for (int j = 0; j < arr.length; j++ ){
-            sum += arr[j];
+        int min = 300_000_000;
+        int max = 1;
+        for (int h = 0; h < arr.length; h++) {
+            if (arr[h] < min) {
+                min = arr[h];
+            }
+            if (arr[h]>max) {
+                max = arr[h];
+            }
         }
-        System.out.println(sum);
+        System.out.println(min);
+        System.out.println(max);
 
 
     }
